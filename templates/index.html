@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <!-- for integrating css we have to put jinja2 technique within head tag -->
+  <head>
+    <!-- <style>
+      h2{
+        background-color: brown;
+      }
+    </style> -->
+    <!-- must give rel="stylesheet" -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css' )}}" >
+    <!-- <script>
+      alert("page is loaded")
+    </script> -->
+    <script type="text/javascript" src="{{ url_for('static',filename='script/script.js') }}">
+    </script>
+
+  </head>
+<body>
+
+
+
+
+<div class="container">
+    <h2>RESULT</h2>
+    <form action="/submit" method='post'>
+        <label for="Science">Science:</label><br>
+        <input type="text" id="science" name="science" placeholder="100" value="0"><br><br>
+        <label for="Maths">Maths:</label><br>
+        <input type="text" id="maths" name="maths" value="0"  placeholder="100"><br><br>
+        <label for="C ">C Programming:</label><br>
+        <input type="text" id="c" name="c" placeholder="100" value="0"><br><br>
+        <label for="datascience">Data Science:</label><br>
+        <input type="text" id="datascience" name="datascience" placeholder="100" value="0"><br><br>
+        <button>Submit</button>
+        <p>If you click the "Submit" button, the form-data will be sent to a page called "/submit".</p>
+      </form>
+</div>
+ 
+
+
+
+</body>
+</html>
